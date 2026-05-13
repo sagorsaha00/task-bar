@@ -34,7 +34,7 @@ export default function Tasker() {
   
   const fetchTasks = async ({ queryKey }: any) => {
     const [_key, search] = queryKey;
-    const res = await axios.get("https://taskbarbackend.netlify.app/", {
+    const res = await axios.get("https://task-bar-delta.vercel.app", {
       params: { search },
     });
 
@@ -43,7 +43,7 @@ export default function Tasker() {
 
  
   const deleteTask = async (id: string) => {
-    await axios.delete(`https://taskbarbackend.netlify.app/tasks/${id}`);
+    await axios.delete(`https://task-bar-delta.vercel.app/tasks/${id}`);
   };
 
   const queryClient = useQueryClient();
@@ -129,7 +129,7 @@ export default function Tasker() {
                 </tr>
               </thead>
               <tbody>
-                {Data.length === 0 ? (
+                {Data.length === 1 ? (
                   <tr>
                     <td
                       colSpan={5}

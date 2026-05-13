@@ -13,6 +13,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://taskbarclient.netlify.app",
+     
     ],
     credentials: true,
   })

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import TaskModel from "./../../server/lib/taskSchema";
+import TaskModel from "../lib/taskSchema";
 import mongoose from "mongoose";
 export class TaskController {
   create = async (req: Request, res: Response) => {

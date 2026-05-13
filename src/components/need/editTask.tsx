@@ -33,7 +33,7 @@ export default function EditTask({ task }: { task: Task }) {
   const updateTask = async (task: Task) => {
     const { _id, ...rest } = task; // extract ID and keep the data
     const response = await axios.patch(
-      `https://taskbarbackend.netlify.app/tasks/${_id}`,
+      `https://task-bar-delta.vercel.app/tasks/${_id}`,
       rest
     );
     console.log("DataId", _id);
