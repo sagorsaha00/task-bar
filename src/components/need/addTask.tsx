@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
+import { API_BASE_URL } from "../../lib/api";
 import {
   Dialog,
   DialogTrigger,
@@ -62,7 +63,7 @@ export default function AddTaskDialog() {
 
   const submitFormData = async (formData: FormValues) => {
     const response = await axios.post(
-      "https://task-bar-delta.vercel.app/tasksPost",
+      `${API_BASE_URL}/tasksPost`,
       formData
     );
     console.log("response", response);

@@ -9,6 +9,7 @@ import AddTask from "./components/need/addTask";
 import EditTask from "./components/need/editTask";
 import axios from "axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { API_BASE_URL } from "./lib/api";
 
 // Task Interface
 export interface Task {
@@ -34,7 +35,7 @@ export default function Tasker() {
   
   const fetchTasks = async ({ queryKey }: any) => {
     const [_key, search] = queryKey;
-    const res = await axios.get("https://task-bar-delta.vercel.app", {
+    const res = await axios.get(`${API_BASE_URL}/getAllTask`, {
       params: { search },
     });
 
@@ -43,7 +44,7 @@ export default function Tasker() {
 
  
   const deleteTask = async (id: string) => {
-    await axios.delete(`https://task-bar-delta.vercel.app/tasks/${id}`);
+    await axios.delete(`${API_BASE_URL}/tasks/${id}`);
   };
 
   const queryClient = useQueryClient();

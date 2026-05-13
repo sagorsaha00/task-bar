@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Pencil } from "lucide-react";
 import { Button } from "../ui/button";
+import { API_BASE_URL } from "../../lib/api";
 import {
   Dialog,
   DialogClose,
@@ -33,7 +34,7 @@ export default function EditTask({ task }: { task: Task }) {
   const updateTask = async (task: Task) => {
     const { _id, ...rest } = task; // extract ID and keep the data
     const response = await axios.patch(
-      `https://task-bar-delta.vercel.app/tasks/${_id}`,
+      `${API_BASE_URL}/tasks/${_id}`,
       rest
     );
     console.log("DataId", _id);
