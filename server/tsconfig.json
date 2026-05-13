@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "d:/learn-with-sumit-project-practice/task-bar-project",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": [
+    "index.ts",
+    "task-backend/**/*.ts",
+    "server/**/*.ts",
+    "task-backend/task-router.ts"
+  ],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "esm": false,
+    "transpileOnly": true
+  }
+}
