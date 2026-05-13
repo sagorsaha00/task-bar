@@ -62,7 +62,7 @@ export default function AddTaskDialog() {
 
   const submitFormData = async (formData: FormValues) => {
     const response = await axios.post(
-      "http://localhost:5000/tasksPost",
+      "https://taskbarbackend.netlify.app/tasksPost",
       formData
     );
     console.log("response", response);

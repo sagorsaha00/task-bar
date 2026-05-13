@@ -10,17 +10,17 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "d:/learn-with-sumit-project-practice/task-bar-project",
+    "rootDir": "./src",
     "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true
   },
   "include": [
-    "index.ts",
-    "task-backend/**/*.ts",
+    "src/**/*.ts",
+    "src/task-backend/**/*.ts",
     "server/**/*.ts",
-    "task-backend/task-router.ts"
+    "src/task-backend/task-router.ts"
   ],
   "exclude": ["node_modules", "dist"],
   "ts-node": {

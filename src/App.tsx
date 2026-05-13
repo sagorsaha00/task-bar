@@ -34,7 +34,7 @@ export default function Tasker() {
   
   const fetchTasks = async ({ queryKey }: any) => {
     const [_key, search] = queryKey;
-    const res = await axios.get("http://localhost:5000/getAllTask", {
+    const res = await axios.get("https://taskbarbackend.netlify.app/", {
       params: { search },
     });
 
@@ -43,7 +43,7 @@ export default function Tasker() {
 
  
   const deleteTask = async (id: string) => {
-    await axios.delete(`http://localhost:5000/tasks/${id}`);
+    await axios.delete(`https://taskbarbackend.netlify.app/tasks/${id}`);
   };
 
   const queryClient = useQueryClient();
